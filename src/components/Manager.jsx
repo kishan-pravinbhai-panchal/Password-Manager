@@ -20,7 +20,7 @@ const Manager = () => {
 
     const showPassword = () => {
         passwordRef.current.type = "text"
-        if (ref.current.src.includes("/2.gif")) {
+        if (ref.current.src.includes("2.gif")) {
             toast.success('Show the Password', {
                 position: "top-right",
                 autoClose: 2000,
@@ -31,7 +31,7 @@ const Manager = () => {
                 progress: undefined,
                 theme: "dark",
             });
-            ref.current.src = "/1.gif"
+            ref.current.src = "1.gif"
             passwordRef.current.type = "text"
         } else {
             toast.success('Hide the Password', {
@@ -44,7 +44,7 @@ const Manager = () => {
                 progress: undefined,
                 theme: "dark",
             });
-            ref.current.src = "/2.gif"
+            ref.current.src = "2.gif"
             passwordRef.current.type = "password"
         }
     }
@@ -129,7 +129,7 @@ const Manager = () => {
                         <div className="relative">
                             <input ref={passwordRef} value={form.password} onChange={handleChange} className='rounded-full border border-green-500 w-full px-4 py-1' type="password" name='password' id='password' placeholder='Enter Password' />
                             <span className="absolute  right-[12px] top-[3px] cursor-pointer" onClick={showPassword}>
-                                <img ref={ref} className="p-1 z-5000" width={30} src="/2.gif" alt="eye" />
+                                <img ref={ref} className="p-1 z-5000" width={30} src="2.gif" alt="eye" />
                             </span>
                         </div>
                     </div>
